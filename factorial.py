@@ -6,7 +6,7 @@ def factorial(num):
         return sum
 
 # test cases
-print(factorial(5))
+print(factorial(3))
 print(factorial(1))
 print(factorial(2))
 print(factorial(0))
