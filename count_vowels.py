@@ -8,19 +8,13 @@ def count_vowels(txt):
 
 count_vowels('Celebration')
 
+# other solution1
+def count_vowels(txt):
+  return sum([1 for x in txt.lower() if x in 'aeiou'])
 
-import unittest
+# other solution2
+import re
 
-class Test(unittest.TestCase):
+def countVowels(str):
+	return len(re.findall(r'[aeiou]', str))
 
-   def test_count_vowels(self):
-       Test.assert_equals( count_vowels ( "Celebration" ),5 )
-       Test.assert_equals ( count_vowels ( "Palm" ),1 )
-       Test.assert_equals ( count_vowels ( "Prediction" ),4 )
-       Test.assert_equals ( count_vowels ( "Suite" ),3 )
-       Test.assert_equals ( count_vowels ( "Quote" ),3 )
-       Test.assert_equals ( count_vowels ( "Portrait" ),3 )
-       Test.assert_equals ( count_vowels ( "Steam" ),2 )
-       Test.assert_equals ( count_vowels ( "Tape" ),2 )
-       Test.assert_equals ( count_vowels ( "Nightmare" ),3 )
-       Test.assert_equals ( count_vowels ( "Convention" ),4 )
