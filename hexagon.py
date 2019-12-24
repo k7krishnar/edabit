@@ -9,14 +9,13 @@ def pentagonal(num):
     return sum+1
 
 
-
-
-
-
-
-
 #test cases
 
 pentagonal(21)
 pentagonal(13)
 
+# top answer
+
+
+def pentagonal(num):
+    print([ sumi for i in range(1,num)])
