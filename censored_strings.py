@@ -1,13 +1,3 @@
-def uncensor1(txt, vowels):
-    un=[]
-    v=([ v for v in vowels])
-    for t in txt.split(" "):
-        for i in range(1,t.count('*')+1):
-            print(i)
-            t=t.replace('*',v.pop(0),1)
-            print(t)
-
-    print(''.join(t))
 
 def uncensor(txt, vowels):
     v = ([v for v in vowels])
@@ -18,8 +8,15 @@ def uncensor(txt, vowels):
         txt=t1
     print(t1)
 
+# test case
 uncensor ( 'Wh*r* d*d my v*w*ls g*?','eeioeo')
 uncensor('abcd', '')
 
+# elegant
+def uncensor(t, v):
+    for c in v: t = t.replace('*', c, 1)
+    return t
 
+def uncensor(txt, vowels):
+    return txt.replace('*', '{}').format(*vowels)
 
