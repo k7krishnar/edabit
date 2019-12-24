@@ -17,6 +17,7 @@ def uncensor(t, v):
     for c in v: t = t.replace('*', c, 1)
     return t
 
+
 def uncensor(txt, vowels):
     return txt.replace('*', '{}').format(*vowels)
 
